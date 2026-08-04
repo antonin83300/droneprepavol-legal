@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Politique de confidentialité — DronePrepaVol</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+    line-height: 1.55;
+    color: #12153f;
+    background: #f7f7fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f5f6fb; background: #171b4d; }
+    h1, h2 { color: #f5f6fb; }
+    .card { background: #22265e; border-color: #454a8f; }
+  }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  .updated { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #8d90ad; margin-bottom: 24px; }
+  h2 { font-size: 15px; margin-top: 28px; margin-bottom: 8px; }
+  .card { background: #ecedf6; border: 1px solid #d8dae8; border-radius: 12px; padding: 14px 16px; }
+  ul { margin: 8px 0; padding-left: 20px; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+  <h1>Politique de confidentialité</h1>
+  <div class="updated">DronePrepaVol — dernière mise à jour : août 2026</div>
+
+  <h2>Ce que l'application fait</h2>
+  <div class="card">
+    <p>DronePrepaVol est un outil de préparation de mission drone à usage professionnel. Elle fonctionne sans compte utilisateur, sans serveur applicatif et sans suivi publicitaire.</p>
+  </div>
+
+  <h2>Données stockées</h2>
+  <div class="card">
+    <p>Toutes les données de mission (client, site, régime, checklist, photos, signature, journal de vol) sont enregistrées uniquement sur l'appareil de l'utilisateur (stockage local), jamais transmises à un serveur de l'éditeur — parce qu'il n'y en a pas.</p>
+  </div>
+
+  <h2>Services externes utilisés</h2>
+  <div class="card">
+    <p>Pour fonctionner, l'application interroge en direct, au moment de la saisie, trois services publics tiers :</p>
+    <ul>
+      <li>Base Adresse Nationale (api-adresse.data.gouv.fr) — géocodage de l'adresse saisie.</li>
+      <li>Géoportail IGN (data.geopf.fr) — recherche des zones réglementées drone à proximité des coordonnées saisies.</li>
+      <li>Open-Meteo (api.open-meteo.com) — prévisions météo pour les coordonnées saisies.</li>
+    </ul>
+    <p>Ces services reçoivent uniquement l'adresse ou les coordonnées GPS saisies par l'utilisateur pour la mission en cours, sans identifiant de compte ni donnée personnelle associée. Aucune donnée n'est envoyée à ces services en arrière-plan ou de façon automatique.</p>
+  </div>
+
+  <h2>Localisation</h2>
+  <div class="card">
+    <p>L'application n'accède pas à la position GPS de l'appareil. Les coordonnées utilisées sont celles saisies manuellement par l'utilisateur pour le site de mission.</p>
+  </div>
+
+  <h2>Photos</h2>
+  <div class="card">
+    <p>L'application demande l'accès à la photothèque uniquement pour permettre à l'utilisateur de joindre des photos avant/après à un rapport de mission. Aucune photo n'est transmise ailleurs que dans le rapport généré localement (PDF).</p>
+  </div>
+
+  <h2>Verrouillage de l'application</h2>
+  <div class="card">
+    <p>Si le verrouillage par code ou Face ID est activé dans Réglages, il protège l'accès à l'application sur cet appareil uniquement. Le code est stocké de façon chiffrée sur l'appareil ; l'authentification Face ID est traitée par iOS et n'est jamais transmise à l'application ni à un tiers.</p>
+  </div>
+
+  <h2>Abonnement</h2>
+  <div class="card">
+    <p>L'abonnement optionnel « DronePrepaVol Pro » est géré par Apple (App Store) et RevenueCat pour la validation des achats. Aucune donnée de paiement n'est collectée ni stockée par l'application elle-même.</p>
+  </div>
+
+  <h2>Suppression des données</h2>
+  <div class="card">
+    <p>L'utilisateur peut supprimer une mission individuellement, ou réinitialiser l'intégralité des données depuis Réglages → Données → « Réinitialiser toutes les données ». Désinstaller l'application supprime également toutes les données stockées localement.</p>
+  </div>
+
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Pour toute question relative à cette politique de confidentialité : <a href="mailto:paulardnettoyage@gmail.com">paulardnettoyage@gmail.com</a></p>
+  </div>
+</body>
+</html>
