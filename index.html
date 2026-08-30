@@ -1,87 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Politique de confidentialité — DronePrepaVol</title>
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 32px 20px 64px;
-    line-height: 1.55;
-    color: #12153f;
-    background: #f7f7fb;
-  }
+  :root { --ink:#16181d; --slate:#5b6270; --line:#e3e5ea; --paper:#ffffff; --paper2:#f7f7fb; --accent:#2f5bd7; }
   @media (prefers-color-scheme: dark) {
-    body { color: #f5f6fb; background: #171b4d; }
-    h1, h2 { color: #f5f6fb; }
-    .card { background: #22265e; border-color: #454a8f; }
+    :root { --ink:#eef0f4; --slate:#a2a9b8; --line:#2a2d35; --paper:#14161a; --paper2:#1b1e24; --accent:#8aa9ff; }
   }
-  h1 { font-size: 22px; margin-bottom: 4px; }
-  .updated { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #8d90ad; margin-bottom: 24px; }
-  h2 { font-size: 15px; margin-top: 28px; margin-bottom: 8px; }
-  .card { background: #ecedf6; border: 1px solid #d8dae8; border-radius: 12px; padding: 14px 16px; }
-  ul { margin: 8px 0; padding-left: 20px; }
-  a { color: inherit; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         line-height:1.6; }
+  .wrap { max-width:760px; margin:0 auto; padding:32px 20px 80px; }
+  nav { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:28px; padding-bottom:18px; border-bottom:1px solid var(--line); }
+  nav a { text-decoration:none; color:var(--ink); border:1px solid var(--line); background:var(--paper2);
+          padding:8px 14px; border-radius:10px; font-size:14px; font-weight:600; }
+  nav a[aria-current="page"] { border-color:var(--accent); color:var(--accent); }
+  h1 { font-size:26px; line-height:1.25; margin:0 0 6px; }
+  h2 { font-size:18px; margin:30px 0 8px; padding-top:14px; border-top:1px solid var(--line); }
+  h3 { font-size:15px; margin:20px 0 6px; color:var(--slate); }
+  p, li { font-size:15px; }
+  ul { padding-left:22px; }
+  strong { font-weight:650; }
+  footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--line); color:var(--slate); font-size:13px; }
+  a { color:var(--accent); }
 </style>
 </head>
 <body>
-  <h1>Politique de confidentialité</h1>
-  <div class="updated">DronePrepaVol — dernière mise à jour : août 2026</div>
-
-  <h2>Ce que l'application fait</h2>
-  <div class="card">
-    <p>DronePrepaVol est un outil de préparation de mission drone à usage professionnel. Elle fonctionne sans compte utilisateur, sans serveur applicatif et sans suivi publicitaire.</p>
-  </div>
-
-  <h2>Données stockées</h2>
-  <div class="card">
-    <p>Toutes les données de mission (client, site, régime, checklist, photos, signature, journal de vol) sont enregistrées uniquement sur l'appareil de l'utilisateur (stockage local), jamais transmises à un serveur de l'éditeur — parce qu'il n'y en a pas.</p>
-  </div>
-
-  <h2>Services externes utilisés</h2>
-  <div class="card">
-    <p>Pour fonctionner, l'application interroge en direct, au moment de la saisie, trois services publics tiers :</p>
-    <ul>
-      <li>Base Adresse Nationale (api-adresse.data.gouv.fr) — géocodage de l'adresse saisie.</li>
-      <li>Géoportail IGN (data.geopf.fr) — recherche des zones réglementées drone à proximité des coordonnées saisies.</li>
-      <li>Open-Meteo (api.open-meteo.com) — prévisions météo pour les coordonnées saisies.</li>
-    </ul>
-    <p>Ces services reçoivent uniquement l'adresse ou les coordonnées GPS saisies par l'utilisateur pour la mission en cours, sans identifiant de compte ni donnée personnelle associée. Aucune donnée n'est envoyée à ces services en arrière-plan ou de façon automatique.</p>
-  </div>
-
-  <h2>Localisation</h2>
-  <div class="card">
-    <p>L'application n'accède pas à la position GPS de l'appareil. Les coordonnées utilisées sont celles saisies manuellement par l'utilisateur pour le site de mission.</p>
-  </div>
-
-  <h2>Photos</h2>
-  <div class="card">
-    <p>L'application demande l'accès à la photothèque uniquement pour permettre à l'utilisateur de joindre des photos avant/après à un rapport de mission. Aucune photo n'est transmise ailleurs que dans le rapport généré localement (PDF).</p>
-  </div>
-
-  <h2>Verrouillage de l'application</h2>
-  <div class="card">
-    <p>Si le verrouillage par code ou Face ID est activé dans Réglages, il protège l'accès à l'application sur cet appareil uniquement. Le code est stocké de façon chiffrée sur l'appareil ; l'authentification Face ID est traitée par iOS et n'est jamais transmise à l'application ni à un tiers.</p>
-  </div>
-
-  <h2>Abonnement</h2>
-  <div class="card">
-    <p>L'abonnement optionnel « DronePrepaVol Pro » est géré par Apple (App Store) et RevenueCat pour la validation des achats. Aucune donnée de paiement n'est collectée ni stockée par l'application elle-même.</p>
-  </div>
-
-  <h2>Suppression des données</h2>
-  <div class="card">
-    <p>L'utilisateur peut supprimer une mission individuellement, ou réinitialiser l'intégralité des données depuis Réglages → Données → « Réinitialiser toutes les données ». Désinstaller l'application supprime également toutes les données stockées localement.</p>
-  </div>
-
-  <h2>Contact</h2>
-  <div class="card">
-    <p>Pour toute question relative à cette politique de confidentialité : <a href="mailto:paulardnettoyage@gmail.com">paulardnettoyage@gmail.com</a></p>
-  </div>
+<div class="wrap">
+<nav>
+  <a href="./index.html" aria-current="page">Politique de confidentialité</a>
+  <a href="./cgu.html">Conditions d'utilisation</a>
+</nav>
+<h1>Politique de confidentialité — DronePrepaVol (DPV)</h1>
+<p>Dernière mise à jour : août 2026</p>
+<h2>Ce que l&#x27;application fait</h2>
+<p>DronePrepaVol est un outil de préparation de mission drone à usage professionnel. Elle fonctionne avec un compte personnel, sans suivi publicitaire et sans partage de données à des fins commerciales.</p>
+<h2>Compte et données stockées</h2>
+<p>La création d&#x27;un compte (adresse e-mail et mot de passe) est nécessaire pour utiliser l&#x27;application. Elle permet de retrouver ses missions sur plusieurs appareils.</p>
+<p>Les données de mission (client, site, régime, checklist, photos avant/après, signature, journal de vol) sont enregistrées sur l&#x27;appareil <strong>et</strong> synchronisées avec le compte de l&#x27;utilisateur, sur une infrastructure hébergée dans l&#x27;Union européenne (Supabase). Chaque compte est isolé des autres : un utilisateur ne peut accéder qu&#x27;à ses propres données.</p>
+<p>L&#x27;application fonctionne hors connexion ; les modifications effectuées sans réseau sont envoyées dès son retour.</p>
+<h3>Données de clients tiers</h3>
+<p>Les missions contiennent des informations concernant les clients du télépilote (nom, adresse du chantier). L&#x27;utilisateur de l&#x27;application en est responsable au sens du RGPD ; l&#x27;éditeur agit comme sous-traitant et ne les utilise à aucune autre fin que de rendre le service.</p>
+<h2>Services externes utilisés</h2>
+<p>Pour fonctionner, l&#x27;application interroge en direct, au moment de la saisie, des services publics tiers :</p>
+<ul>
+<li><strong>Base Adresse Nationale</strong> (api-adresse.data.gouv.fr) — géocodage de l&#x27;adresse saisie.</li>
+<li><strong>Géoportail IGN</strong> (data.geopf.fr) — recherche des zones réglementées drone à proximité des coordonnées saisies.</li>
+<li><strong>Open-Meteo</strong> (api.open-meteo.com) — prévisions météo pour les coordonnées saisies.</li>
+<li><strong>SOFIA-Briefing</strong> (sofia-briefing.aviation-civile.gouv.fr, DGAC) — NOTAM en vigueur à proximité des coordonnées saisies.</li>
+<li><strong>NOAA SWPC</strong> (services.swpc.noaa.gov) — indice géomagnétique Kp, information générale sans donnée de position.</li>
+</ul>
+<p>Ces services reçoivent uniquement l&#x27;adresse ou les coordonnées GPS saisies par l&#x27;utilisateur pour la mission en cours, sans identifiant de compte ni donnée personnelle associée. Aucune donnée n&#x27;est envoyée à ces services en arrière-plan ou de façon automatique.</p>
+<p>L&#x27;abonnement optionnel est géré par <strong>RevenueCat</strong>, qui reçoit l&#x27;identifiant du compte pour rattacher l&#x27;abonnement à son titulaire.</p>
+<h2>Localisation</h2>
+<p>L&#x27;application n&#x27;accède pas à la position GPS de l&#x27;appareil. Les coordonnées utilisées sont celles saisies manuellement par l&#x27;utilisateur pour le site de mission.</p>
+<h2>Photos</h2>
+<p>L&#x27;application demande l&#x27;accès à la photothèque uniquement pour permettre à l&#x27;utilisateur de joindre des photos avant/après à un rapport de mission. Ces photos sont conservées sur l&#x27;appareil et synchronisées avec le compte de l&#x27;utilisateur (stockage privé hébergé dans l&#x27;Union européenne), afin de rester disponibles depuis ses autres appareils. Elles ne sont accessibles qu&#x27;à lui, et ne sont transmises à aucun tiers.</p>
+<h2>Abonnement</h2>
+<p>L&#x27;abonnement optionnel « DronePrepaVol Pro » est géré par Apple (App Store) et RevenueCat pour la validation des achats. RevenueCat reçoit l&#x27;identifiant du compte, afin de rattacher l&#x27;abonnement à son titulaire lors d&#x27;un changement d&#x27;appareil. Aucune donnée de paiement n&#x27;est collectée ni stockée par l&#x27;application elle-même.</p>
+<h2>Suppression des données</h2>
+<p>L&#x27;utilisateur peut supprimer une mission individuellement, ou réinitialiser l&#x27;intégralité des données depuis Réglages → Données → « Réinitialiser toutes les données ». Désinstaller l&#x27;application supprime également toutes les données stockées localement.</p>
+<h3>Export des données</h3>
+<p>Réglages → Données → « Exporter au format JSON » produit un fichier contenant l&#x27;intégralité des données de l&#x27;utilisateur (missions, documents, matériel, configurations, réglages, modèles de check-list), dans un format structuré et lisible, que l&#x27;utilisateur peut conserver où il le souhaite.</p>
+<h3>Suppression du compte</h3>
+<p>Pour les utilisateurs disposant d&#x27;un compte, Réglages → Compte → « Supprimer définitivement mon compte » supprime le compte ainsi que l&#x27;intégralité des données associées (missions, photos, réglages), sur les serveurs comme sur l&#x27;appareil. L&#x27;opération est immédiate et irréversible.</p>
+<p>Un abonnement souscrit via l&#x27;App Store n&#x27;est pas résilié par cette action : il reste à gérer depuis Réglages iOS → compte Apple → Abonnements.</p>
+<h2>Contact</h2>
+<p>Pour toute question relative à cette politique de confidentialité : paulardnettoyage@gmail.com</p>
+<footer>
+  DronePrepaVol — Antonin Paulard (Paulard Nettoyage) · <a href="mailto:paulardnettoyage@gmail.com">paulardnettoyage@gmail.com</a>
+</footer>
+</div>
 </body>
 </html>
-<!-- redeploy trigger -->
